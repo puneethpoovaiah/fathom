@@ -196,7 +196,7 @@ function DashboardPanel({ title, copy, children }: { title: string; copy: string
 function NotFound() { return <PageShell><main className="mx-auto flex min-h-[560px] max-w-[1440px] items-center px-5 py-20 lg:px-10"><div><p className="font-mono text-sm text-[#EAB308]">404 / FATHOM</p><h1 className="mt-4 font-display text-5xl font-bold text-slate-100">This room does not exist.</h1><p className="mt-4 text-slate-500">The address may have changed or access may be restricted.</p><Link href="/" className="mt-8 inline-flex items-center gap-2 rounded-sm bg-[#CA8A04] px-5 py-3 text-sm font-bold text-[#111827]" data-testid="link-not-found-home">Return to Fathom <ArrowRight size={16} /></Link></div></main></PageShell>; }
 
 function App() {
-  return <WouterRouter><Switch>
+  return <WouterRouter base="/fathom"><Switch>
     <Route path="/" component={Home} />
     <Route path="/tenders" component={Tenders} />
     <Route path="/procurement" component={Procurement} />

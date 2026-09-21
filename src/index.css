@@ -1,1 +1,182 @@
 @import "tailwindcss";
+
+:root {
+  --bg: #101311;
+  --surface: #171C19;
+  --surface-elevated: #1D211F;
+  --surface-strong: #202620;
+  --border: #232B26;
+  --text: #F0F1EA;
+  --muted: #929A92;
+  --oxide: #71805E;
+  --brass: #B39A62;
+  --brass-soft: rgba(179, 154, 98, 0.12);
+  --shadow-soft: rgba(0, 0, 0, 0.24);
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, "Segoe UI", sans-serif;
+  letter-spacing: -0.015em;
+  background-image:
+    radial-gradient(circle at top, rgba(113, 128, 94, 0.08), transparent 28%),
+    linear-gradient(180deg, rgba(13, 16, 14, 0.9), rgba(16, 19, 17, 1));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+img,
+svg {
+  display: block;
+}
+
+::selection {
+  background: rgba(179, 154, 98, 0.35);
+  color: var(--text);
+}
+
+.text-slate-100,
+.text-slate-200,
+.text-slate-300,
+.text-slate-400,
+.text-slate-500,
+.text-slate-600,
+.text-slate-700,
+.text-slate-800,
+.text-slate-900,
+.text-slate-950,
+.text-slate-50 {
+  color: var(--text) !important;
+}
+
+.text-slate-400,
+.text-slate-500,
+.text-slate-600,
+.text-slate-700,
+.text-slate-800,
+.text-slate-900,
+.text-slate-950 {
+  color: var(--muted) !important;
+}
+
+.bg-\[\#0F172A\],
+.bg-\[\#0B1120\],
+.bg-slate-950,
+.bg-slate-900,
+.bg-slate-800,
+.bg-slate-700 {
+  background-color: var(--bg) !important;
+}
+
+.bg-\[\#111827\],
+.bg-\[\#172236\],
+.bg-\[\#1E293B\],
+.bg-slate-800,
+.bg-slate-700 {
+  background-color: var(--surface) !important;
+}
+
+.bg-\[\#111827\] {
+  background-color: var(--surface) !important;
+}
+
+.border-slate-600,
+.border-slate-700,
+.border-slate-800,
+.border-slate-500,
+.border-slate-600\/70,
+.border-slate-700\/70,
+.border-slate-700\/80,
+.border-slate-600\/80,
+.border-slate-600\/60,
+.border-slate-700\/60 {
+  border-color: var(--border) !important;
+}
+
+.border-\[\#CA8A04\],
+.border-\[\#CA8A04\]\/40,
+.border-\[\#CA8A04\]\/60,
+.border-\[\#CA8A04\]\/70 {
+  border-color: rgba(179, 154, 98, 0.65) !important;
+}
+
+.text-\[\#EAB308\],
+.text-\[\#CA8A04\] {
+  color: var(--brass) !important;
+}
+
+.bg-\[\#CA8A04\] {
+  background-color: var(--brass) !important;
+  color: #101311 !important;
+}
+
+.bg-\[\#CA8A04\]\/10,
+.bg-\[\#CA8A04\]\/15,
+.bg-\[\#CA8A04\]\/20 {
+  background-color: rgba(179, 154, 98, 0.12) !important;
+}
+
+.text-emerald-300,
+.text-emerald-200,
+.text-emerald-400,
+.text-emerald-500 {
+  color: var(--oxide) !important;
+}
+
+.border-emerald-700\/50,
+.border-emerald-700\/60 {
+  border-color: rgba(113, 128, 94, 0.6) !important;
+}
+
+.bg-emerald-950\/30,
+.bg-emerald-900\/60,
+.bg-emerald-950\/20 {
+  background-color: rgba(113, 128, 94, 0.12) !important;
+}
+
+.text-slate-100,
+.text-slate-200,
+.text-slate-300 {
+  color: var(--text) !important;
+}
+
+input,
+select,
+textarea {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted) !important;
+  opacity: 1;
+}
+
+button,
+a {
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
